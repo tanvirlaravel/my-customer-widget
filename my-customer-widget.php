@@ -91,3 +91,9 @@ function mcw_register_widget(){
      */
     register_widget("My_Custom_Widget");
 }
+
+// Add admin panel script 
+add_action("admin_enqueue_scripts", "mcw_admin_scripts");
+function mcw_admin_scripts(){
+    wp_enqueue_script("mcw-admin-script", plugin_dir_url(__FILE__) . "/script.js", array("jquery"));
+}
