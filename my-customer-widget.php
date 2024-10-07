@@ -84,6 +84,7 @@ if(!defined("ABSPATH")){
 
 add_action("widgets_init", "mcw_register_widget");
 
+include_once plugin_dir_path(__FILE__) . "My_Custom_Widget.php";
 function mcw_register_widget(){
     /**
      * My_Custom_Widget. This class will contain the logic for displaying and managing the widget's content and settings.
